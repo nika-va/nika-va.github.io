@@ -193,6 +193,7 @@ header {
   background-color: #45489a;
   padding: 20px;
   text-align: center;
+  font-family: "Creattion Demo";
 }
 
 .sidebar-navigation .logo a {
@@ -454,7 +455,7 @@ header {
 .slick-vertical .slick-slide{display:block;height:auto;border:1px solid transparent}
 
 
-/* Featured Style */
+/* Style */
 
 #featured {
   padding-left: 60px;
@@ -498,6 +499,9 @@ header {
   display: inline-block;
   top: -110px;
   right: 0;
+}
+#featured .owl-carousel img{
+  height: 280px;
 }
 
 #featured .owl-nav button:focus {
