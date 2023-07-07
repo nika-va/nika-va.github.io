@@ -620,10 +620,17 @@ header {
 #projects .masonry .item img:hover {
   opacity: 0.5;
 }
+#projects tr:hover{
+  background-color: #e7e7f2;
+}
+#projects table h4{
+  font-size: 21px;
+  font-weight: 600;
+  color: #232323;
+  letter-spacing: 0.5px;
+}
 
-
-
-/* Video Presentation Style */
+/* Courses Completed Style */
 
 #video {
   text-align: center;
