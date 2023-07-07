@@ -655,8 +655,45 @@ header {
 
 #video .accent-button {
   margin-top: 30px;
+  clear: both;
 }
-
+#video .card-holder{
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  gap: 10px;
+  align-items: flex-start
+}
+#video .card{
+  flex-basis: 18rem; 
+  border: 1px solid #aaa;
+  border-radius: 5px;
+  overflow: hidden;
+}
+#video .card:hover a{
+  visibility: visible;
+  opacity: 1;
+  transition: visibility 1s, opacity 0.5s ease-in;
+}
+#video img{
+  object-fit: cover;
+  max-width: 100%;
+  height: auto;
+}
+#video .card a{
+  color: white;
+  display: block;
+  text-decoration-line: none;
+  cursor: pointer;
+  visibility: hidden;
+  opacity: 0;
+  border: 0 solid #aaa;
+  width: 100px;
+  margin: 7px auto;
+  padding: 5px 10px;
+  border-radius: 5px;
+  background-color: #45489a;
+}
 .box-video{
   width: 100%;
   position: relative;
