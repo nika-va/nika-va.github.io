@@ -46,10 +46,15 @@
           </nav>
       </div>
   </header>
-
+  <div class="openButton">
+    <img src="img\menu.png" alt="">
+  </div>
     <div class="sidebar-navigation hidde-sm hidden-xs">
       <div class="logo">
         <a href="#">Nigar</a>
+      </div>
+      <div class="close">
+        <img src="img\close.png" alt="">
       </div>
       <nav>
         <ul>
@@ -116,7 +121,6 @@
         </li>
       </ul>
     </div>
-
     <div class="slider">
       <div class="Modern-Slider content-section" id="top">
         <!-- Item -->
@@ -922,8 +926,28 @@
     <script src="js/main.js"></script>
 
     <script>
+    const nav = document.querySelector('.sidebar-navigation');
+    const openButton = document.querySelector('.openButton');
+    const closeButton = document.querySelector('.close');
+    
+    
+    let isNavClosed = false;
+    
+    closeButton.addEventListener('click', () => {
+     nav.classList.add('closed');
+     openButton.style.display = 'block'
+     isNavClosed = true;
+    });
 
-const seeAllButton = document.getElementById('seeAllButton');
+    openButton.addEventListener('click', () => {
+    nav.classList.remove('closed');
+    openButton.style.display='none'
+    isNavClosed = true;
+    });
+
+
+
+const seeAlutton = document.getElementById('seeAllButton');
 const cards = document.querySelectorAll('.card');
 const numToShow = 3; // Number of cards to initially show
 let isShowingAll = false; // Flag to track whether all cards are currently shown
