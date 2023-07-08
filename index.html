@@ -931,24 +931,21 @@
     const closeButton = document.querySelector('.close');
     const pageContent = document.querySelector('.page-content');
     
-    let isNavClosed = false;
     
     closeButton.addEventListener('click', () => {
      nav.classList.add('closed');
-     openButton.style.display = 'block'
-     isNavClosed = true;
+     openButton.style.display = 'block';
      setTimeout(() => {
     nav.style.display = 'none';
-  }, 0);
+  }, 400);
     pageContent.style.width = '100%';
     });
 
     openButton.addEventListener('click', () => {
-    nav.classList.remove('closed');
-    openButton.style.display='none'
-    isNavClosed = true;
-    setTimeout(() => {
     nav.style.display = 'block';
+    setTimeout(() => {
+    nav.classList.remove('closed');
+    openButton.style.display='none';
   }, 0);
     pageContent.style.width = '77.5%';
     });
