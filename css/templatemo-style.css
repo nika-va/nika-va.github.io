@@ -494,11 +494,27 @@ header {
   display: inline-block;
   position: relative;
 }
-
 #featured .owl-dots {
   margin-top: 40px;
 }
-
+@media (min-width: 1300px) {
+  .Modern-Slider .info,
+  .Modern-Slider .NextArrow{
+    right: 120px;
+  }
+  .Modern-Slider .PrevArrow{
+    right: 180px;
+  }
+  #featured .owl-carousel {
+    max-width: 85%;
+    margin: 0 auto;
+  }
+}
+@media (max-width: 760px) {
+  .openButton{
+    display: none!important;
+  }
+}
 #featured .owl-dots .owl-dot span  {
   width: 12px;
   height: 12px;
@@ -555,6 +571,7 @@ header {
 #featured .item {
   text-align: left;
   position: relative;
+  max-width: max-content;
   z-index: 10;
 }
 
