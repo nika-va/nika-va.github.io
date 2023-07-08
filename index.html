@@ -929,7 +929,7 @@
     const nav = document.querySelector('.sidebar-navigation');
     const openButton = document.querySelector('.openButton');
     const closeButton = document.querySelector('.close');
-    
+    const pageContent = document.querySelector('.page-content');
     
     let isNavClosed = false;
     
@@ -937,12 +937,20 @@
      nav.classList.add('closed');
      openButton.style.display = 'block'
      isNavClosed = true;
+     setTimeout(() => {
+    nav.style.display = 'none';
+  }, 0);
+    pageContent.style.width = '100%';
     });
 
     openButton.addEventListener('click', () => {
     nav.classList.remove('closed');
     openButton.style.display='none'
     isNavClosed = true;
+    setTimeout(() => {
+    nav.style.display = 'block';
+  }, 0);
+    pageContent.style.width = '77.5%';
     });
 
 
